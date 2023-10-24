@@ -1,0 +1,39 @@
+
+<section class="bannerbg mt-sm-4 mb-sm-6 mt-lg-5 mb-lg-5 homebner">
+    
+    <div class="modal fade bd-example-modal-lg" id="redirectcontact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+            <div class="modal-header" style="border:none!important;">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+                <div class="modal-body p-0">
+                    <!-- Form -->
+                    <%= render "pixoatics/contactUs/contactus_form"%>   
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <!-- <div class="container"></div> -->
+        <div class="">
+            <div class="row main space6">
+                <div class="col-12 col-md-12 col-xl-6 col-lg-6">
+                    <div class="boxhead" style="position: relative;" >
+                        <span>
+                            
+                        </span>
+                        <h2 class="banner-heading">Developing custom software to power your business growth</h2>
+                        <p class="banner-desc">If you are just starting out, we will leverage advanced technology to help you create a new disruptive product.</p>
+                        
+                        <br>
+                        <button type="button" class="btn btn-primary rounded-pill ms-auto btnhover" data-bs-toggle="modal" data-bs-target="#redirectcontact" id="reset-contactus-modal-errors" >Talk to Our Expert <i class="fa fa-arrow-right-long"></i></button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-2 col-xl-2"></div>
+                <div class="col-12 col-md-12 col-lg-4 col-xl-4">
+                    <%= image_tag('reinteractive_stats-svg-1.png', class: 'my-xs-5 my-sm-5 imgbnner img-fluid', alt: 'Banner', style: 'max-width: 100%;') %>
+                </div>
+            </div>
+        </div>
+</section>

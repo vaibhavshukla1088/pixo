@@ -1,0 +1,132 @@
+<section class="formsec">   
+    <div class="formbox" >
+    <figure class="mb-0" style="position: relative;">
+    <figcaption class="box" style="background-image: url('<%= asset_path('reactformbg.jpg') %>');">       
+        <div class="row ">
+          <div class=" ">
+              <div class="main row mt-2">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 p-0">
+                  <p class="text1  pt-5 fw-light mb-1">Looking To Hire</p>
+                  <h6 class="text1  pb-3"><%= banner_title %></h6>
+                </div>
+              </div>              
+              <div class="main row mt-4">
+                <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7 p-0">
+                    <div class ="mb-2" id="on-demand-form-errors">
+                      <%= render "layouts/share/errors", object: @apply_obj %>
+                    </div>
+                  <%= form_tag(on_demand_form_path, method: :post, remote: true, id: "myForm", class: "row g-3") do %>
+                    
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-sm-1 mt-md-5">
+                      <%= text_field_tag 'full_name', nil, class: 'form-control full-name-input', placeholder: 'Full Name*', required: true %>
+                      <span class="error-message" id="full_name-error"></span>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-sm-1 mt-md-5">
+                      <%= text_field_tag 'email', nil, class: 'form-control email-input', placeholder: 'Email*' %>
+                      <span class="error-message" id="email-error"></span>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-sm-1 mt-md-5">
+                      <%= text_field_tag 'country', nil, class: 'form-control', placeholder: 'Country*' %>
+                      <span class="error-message" id="country-error"></span>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-sm-1 mt-md-5">
+                      <%= text_field_tag 'skype', nil, class: 'form-control', placeholder: 'Skype' %>
+                    </div>
+                    <% if technology == 'onDemand' %>
+                      <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-sm-1 mt-md-5">
+                        <%= select_tag 'technologies', options_for_select(OnDemand::Form::TECHNOLOGIES), class: 'form-select', prompt: "Technologies*" %>
+                        <span class="error-message" id="technologies-error"></span>
+                      </div>
+                      <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-sm-1 mt-md-5">
+                        <%= select_tag 'resources', options_for_select(OnDemand::Form::RESOURCES), class: 'form-select', prompt: "Resources Required*" %>
+                        <span class="error-message" id="resources-error"></span>
+                      </div>
+                    <% elsif technology == 'ROR' %>
+                      <%= hidden_field_tag 'technologies', 'Ruby on rails' %>
+                      <%= hidden_field_tag 'resources', 'specify in message' %>
+                    <% elsif technology == 'ReactJs' %>
+                      <%= hidden_field_tag 'technologies', 'React Js' %>
+                      <%= hidden_field_tag 'resources', 'specify in message' %>
+                    <% elsif technology == 'QA' %>
+                      <%= hidden_field_tag 'technologies', 'QA / Tester' %>
+                      <%= hidden_field_tag 'resources', 'specify in message' %>
+                    <% elsif technology == 'UI' %>
+                      <%= hidden_field_tag 'technologies', 'UI/UX Designer' %>
+                      <%= hidden_field_tag 'resources', 'specify in message' %>
+                    <% else %>
+                      <%= hidden_field_tag 'technologies', 'React Native' %>
+                      <%= hidden_field_tag 'resources', 'specify in message' %>
+                    <% end %>
+                    <div class="col-sm-offset-2 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-sm-1 mt-md-5">
+                      <%= text_area_tag 'message', nil, class: 'form-control', rows: 1, placeholder: 'Message*' %>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                      <a class="btn btn-primary rounded-pill btnhover mt-3", id="submitFormBtn">Submit <i class="fa fa-arrow-right-long"></i></a>
+                    </div>
+                  <% end %>                
+                </div>
+              </div>
+            </div> 
+        </div>  
+        <figcaption>   
+    </figure>
+        </div>
+</section>
+<style>
+  section.formsec .box{
+    height: inherit;
+    padding-bottom: 39px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    }
+
+  section.formsec  form   .form-select {
+    color: #6F7377;
+    background-color: transparent; border-bottom: 1px solid #CED4DA;
+    border-top: 1px solid transparent!important;
+    border-left: 1px solid transparent!important;
+    border-right: 1px solid transparent!important;padding: 0px;
+  }
+  section.formsec  form   .form-select {
+        box-shadow:none!important;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const submitButton = document.getElementById("submitFormBtn");
+    const form = document.getElementById("myForm");
+    submitButton.addEventListener("click", function (event) {
+      event.preventDefault();
+      const formData = new FormData(form);
+      fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').content,
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.success) {
+            alert("Thank you for your submission! We will review your message.");
+            form.reset();
+            var requestQuoteDiv = document.querySelector('#on-demand-form-errors');
+            var errorContainer = requestQuoteDiv.querySelector('#error-container');
+            errorContainer.classList.add('d-none');
+          } else {
+            var requestQuoteDiv = document.querySelector('#on-demand-form-errors');
+            var errorContainer = requestQuoteDiv.querySelector('#error-container');
+            errorContainer.classList.remove('d-none');
+            var errors = data.errors.join("\n");
+            requestQuoteDiv.querySelector('#error-list').innerText = errors;
+          }
+        })
+        .catch((error) => {
+          alert("An error occurred: " + error.message);
+        });
+    });
+  });
+</script>

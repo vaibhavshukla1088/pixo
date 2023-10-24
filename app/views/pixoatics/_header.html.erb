@@ -1,0 +1,64 @@
+<header class="header">
+    <div class="modal fade bd-example-modal-lg" id="requestquote" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="border:none!important;">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <!-- Form -->
+                    <%= render "pixoatics/request_quote_form" %>
+                            
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light mt-2">
+        <div class="container-fluid">
+            <a class="me-5 pe-5" href="<%= root_path %>">
+                <%= image_tag('Logo.png', class: 'img-fluid', alt: 'logo') %>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item p-1">
+                        <a 
+                            class="nav-link <%= 'active' if current_page?(:controller => 'pixoatics', :action => 'home')%>"
+                            href="<%= root_path %>">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item p-1">
+                        <a 
+                            class="nav-link <%= 'active' if current_page?(:controller => 'pixoatics', :action => 'aboutUs')%>"
+                            href="<%= aboutUs_path %>">
+                            About Us
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item p-1" >
+                        <a class="nav-link <%= 'active' if current_page?(:controller => 'pixoatics', :action => 'service') || current_page?(:controller => 'pixoatics', :action => 'rordeveloper') || current_page?(:controller => 'pixoatics', :action => 'jsdevelopment') || current_page?(:controller => 'pixoatics', :action => 'reactdevelopment') || current_page?(:controller => 'pixoatics', :action => 'QA') || current_page?(:controller => 'pixoatics', :action => 'UI') %>" href="<%= services_path %>">Service</a>
+                    </li> 
+                    <li class="nav-item dropdown p-1">
+                        <a 
+                            class="nav-link <%= 'active' if current_page?(:controller => 'pixoatics', :action => 'onDemand')%>"
+                            href="<%= onDemandDeveloper_path %>" tabindex="-1" aria-disabled="true">On-Demand Developers</a>
+                    </li>
+                    <li class="nav-item p-1">
+                        <a class="nav-link <%= 'active' if current_page?(:controller => 'pixoatics', :action => 'career')%>" href="<%= career_path %>" tabindex="-1" aria-disabled="true">Careers</a>
+                    </li>
+                    <li class="nav-item p-1">
+                        <a class="nav-link <%= 'active' if current_page?(:controller => 'pixoatics', :action => 'contactUs')%>" href="<%= contactUs_path %>">Contact Us</a>
+                    </li>
+                    
+                </ul>
+                <button type="button" class="btn btn-outline-primary rounded-pill ms-auto expertbtn" data-bs-toggle="modal" data-bs-target="#requestquote" id="reset-1-modal-errors">Request Quote</button>
+            </div>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,358 @@
+
+
+
+/* animations csss start */
+
+/* commonly used animation effects csss start */
+
+/* -------------------- for images effect start------------------------ */
+.zoomin img {
+  height: auto;
+  width: auto;
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -ms-transition: all 2s ease;
+  transition: all 2s ease;
+}
+.zoomin img:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+}
+
+/* -------------------- for images  effect end------------------------ */
+
+/* -------------------- for banner section effect start------------------------ */
+
+.bannerheading::before {
+  content: '';
+  border-bottom: solid 3px #3EDCC2;
+  position: absolute;
+  bottom: 0; left: 45%;
+  width: 0;
+  -webkit-transform: scale(0);
+     -moz-transform: scale(0);
+      -ms-transform: scale(0);
+       -o-transform: scale(0);
+          transform: scale(0); 
+}
+
+
+.bannerheading:hover::before {
+  border-bottom: solid thick #3EDCC2;
+  width: 10%;
+  -webkit-animation: heartbeat-x 1.7s infinite ease-in;
+          animation: heartbeat-x 1.7s infinite ease-in;
+}
+
+.bannerheading:hover {
+  -webkit-animation: heartbeat 1.7s infinite ease-in;
+          animation: heartbeat 1.7s infinite ease-in;
+}
+
+@-webkit-keyframes heartbeat {
+  0% { -webkit-transform: scale(1); }
+  10% { -webkit-transform: scale(1.1); }
+  20% { -webkit-transform: scale(1); }
+  30% { -webkit-transform: scale(1.1); }
+  40% { -webkit-transform: scale(1); }
+}
+
+@-webkit-keyframes heartbeat-x {
+  0% { -webkit-transform: scaleX(0); }
+  10% { -webkit-transform: scaleX(1); }
+  20% { -webkit-transform: scaleX(0); }
+  30% { -webkit-transform: scaleX(1); }
+  40% { -webkit-transform: scaleX(0); }
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  10% { transform: scale(1.1); }
+  20% { transform: scale(1); }
+  30% { transform: scale(1.1); }
+  40% { transform: scale(1); }
+}
+
+@keyframes heartbeat-x {
+  0% { transform: scaleX(0); }
+  10% { transform: scaleX(1); }
+  20% { transform: scaleX(0); }
+  30% { transform: scaleX(1); }
+  40% { transform: scaleX(0); }
+}
+
+/* -------------------- for images section effect end------------------------ */
+
+/* -------------------- for heading effects start------------------------ */
+
+.js-development-text,section.whychoosereactjs .js-web-development, 
+ section.whywork .contacthead,
+  section.careerbenifits .benefits-heading, section.processsec .myprocesshead ,
+  section.benifits .reactnativeBenifits {display: grid; place-items: center;}
+  h1.mainheadingeffects {
+      box-shadow: inset 0 0 0 0 #3EDCC2;
+      color: #30303C;
+        padding: 0 .25rem;
+        margin: 0 -.25rem;
+      transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    }
+
+    h6.mainheadingeffects , h2.mainheadingeffects, section.pixoatictouch box h1.mainheadingeffects, 
+    section.whywork .contacthead h1.mainheadingeffects,
+    section.pixoaticcareer .career-banner-heading h1.mainheadingeffects {
+      box-shadow: inset 0 0 0 0 #3EDCC2;
+     
+        padding: 0 .25rem;
+        margin: 0 -.25rem;
+      transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    }
+    
+    section.topsec  h2.main_head:hover{
+      color: #fff;
+            box-shadow: inset 1000px 0 0 0 #3EDCC2;
+    }
+    
+    h1.mainheadingeffects:hover, h2.mainheadingeffects:hover{
+      color: #fff;
+      box-shadow: inset 510px 0 0 0 #3EDCC2;
+    }
+    section.pixoaticcareer .career-banner-heading h1.mainheadingeffects:hover{
+      color: #fff;
+      box-shadow: inset 620px 0 0 0 #3EDCC2;
+    }
+
+    section.socialiconssec h1.mainheadingeffects:hover{
+      color: #fff;
+      box-shadow: inset 1056px 0 0 0 #3EDCC2;
+    }
+    section.processsec .myprocesshead h1.mainheadingeffects{color: #fff;}
+
+  section.benifits .reactnativeBenifits h1.mainheadingeffects{   color: #30303C;}
+    section.processsec .myprocesshead h1.mainheadingeffects:hover{
+      color: #fff;
+      box-shadow: inset 620px 0 0 0 #3EDCC2;
+    }
+    section.benifits .reactnativeBenifits h1.mainheadingeffects:hover{
+      color: #fff;
+      box-shadow: inset 950px 0 0 0 #3EDCC2;
+    }
+
+    section .career-bannr-heading h1.mainheadingeffects:hover{
+      color: #fff;
+      box-shadow: inset 620px 0 0 0 #3EDCC2;
+    }
+
+    section.whywork .contacthead h1.mainheadingeffects:hover{
+      color: #fff;
+      box-shadow: inset 800px 0 0 0 #3EDCC2;
+    }
+
+    section.pixoatictouch h1.mainheadingeffects:hover{
+      color: #fff;
+      box-shadow: inset 350px 0 0 0 #3EDCC2;
+    }
+  
+    section.whychoosereactjs h1:hover{
+      color: #fff;
+      box-shadow: inset 644px 0 0 0 #3EDCC2;
+    }
+    
+    section.careerbenifits .benefits-heading h1.mainheadingeffects:hover{
+      color: #fff;
+      box-shadow: inset 660px 0 0 0 #3EDCC2;
+    }
+
+  section.formsec .myformheading h6:hover{color: #fff;
+      box-shadow: inset 408px 0 0 0 #3EDCC2;}
+
+/* -------------------- for heading effects end------------------------ */
+
+
+
+
+/* commonly used animation effects csss end */
+
+
+/* -------------------- for career page effects start------------------------ */
+
+section.careerbenifits  .card::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: 4px solid transparent;
+}
+
+section.careerbenifits  .card:hover::before {
+  animation: animate 1s linear forwards;
+}
+
+@keyframes animate {
+  0% {
+      width: 0;
+      height: 0;
+      border-top-color: #3EDCC2;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+  }
+
+  50% {
+      width: 100%;
+      height: 0;
+      border-top-color: #3EDCC2;
+      border-right-color: #3EDCC2;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+  }
+
+  100% {
+      width: 100%;
+      height: 100%;
+      border-top-color: #3EDCC2;
+      border-right-color: #3EDCC2;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+  }
+}
+
+section.careerbenifits  .card::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: 4px solid transparent;
+}
+
+section.careerbenifits  .card:hover::after {
+  animation: animates 1s linear forwards;
+}
+
+@keyframes animates {
+  0% {
+      width: 0;
+      height: 0;
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: #3EDCC2;
+  }
+
+  50% {
+      width: 0;
+      height: 100%;
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: #3EDCC2;
+      border-left-color: #3EDCC2;
+  }
+
+  100% {
+      width: 100%;
+      height: 100%;
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: #3EDCC2;
+      border-left-color: #3EDCC2;
+  }
+}
+
+
+/* readmore btn efects career start */
+
+a.btn2{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+a.btn2:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;  
+  top: -60%;
+  font-size: 40px;
+  left: 87%;
+  transition: 0.5s;
+}
+
+a.btn2:hover{
+  padding-right: 24px;
+  padding-left:8px;
+}
+
+a.btn2:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+
+  /* readmore btn efects career end */
+
+
+
+
+/* -------------------- for career page effects end------------------------ */
+
+
+
+  /* ror page effects start */
+
+  section.ourror .agile h1:hover, section.rails_dev_servicesec .card-body:hover .line {
+      width: 10px;
+      animation: grow 1s linear;
+      animation-fill-mode: forwards;
+     animation-duration: 1.9s;
+    }
+    
+    @keyframes grow {
+      100% {
+        width: 100%;
+      }
+    }
+
+  /* ror page effects end */
+
+  /* -------------------- for contact page ,reactjs page, reactnative page effetcs start------------------------ */
+
+    /* bounce effects start */
+ 
+section .js-development-services .card-body:hover img.bounceicon 
+,section .js-development-services .card-body:hover h5.bounceicon, .bounceicon:hover, 
+section.whywork .card-body:hover h1.bounceicon,
+section.whywork .card-body:hover img.bounceicon {
+   animation: bounce 1s;
+}
+
+
+@keyframes bounce {
+   0%, 20%, 60%, 100% {
+       -webkit-transform: translateY(0);
+       transform: translateY(0);
+   }
+
+   40% {
+       -webkit-transform: translateY(-20px);
+       transform: translateY(-20px);
+   }
+
+   80% {
+       -webkit-transform: translateY(-10px);
+       transform: translateY(-10px);
+   }
+}
+
+/* ------------------------------ for contact page ,reactjs page, reactnative page effetcs end------------------------ */
+
+  /* bounce effects end */
+
+  
+
+/* animations csss end */

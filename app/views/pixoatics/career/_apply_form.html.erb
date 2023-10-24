@@ -1,0 +1,150 @@
+  <section class="">
+  <div class="container pb-5 h-100">
+    <div class="row justify-content-center align-items-center">
+      <h2 class="apply-text text-center mb-3sssss">Applying For</h2>      
+      <%= form_with model: @apply_obj, url: apply_form_path, id: "applyform", local: false do |form| %>
+
+        <div class ="mb-2" id="apply-form-div">
+          <%= render "layouts/share/errors", object: @apply_obj %>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="form-outline">
+              <%= form.text_field :full_name, placeholder:"Full Name*",  class:"form-control form-control-lg" %>
+              
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4"> 
+            <div class="form-outline">
+              <%= form.email_field :email_address, placeholder:"Email Address*", class:"form-control form-control-lg"%>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="form-outline">
+              <%= form.text_field :contact_number, placeholder:"Contact Number*",  class:"form-control form-control-lg" %>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4"> 
+            <div class="form-outline">
+              <%= form.select :position, options_for_select(Applyform::POSITION),{ prompt: "Position"}, placeholder:"Position*", class:"form-select form-select-lg" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="form-outline">
+              <%= form.select :experience, options_for_select(Applyform::EXPERIENCE),{ prompt: "Experience"}, { class: "form-select form-select-lg" } %>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4"> 
+            <div class="form-outline">
+              <%= form.text_field :current_ctc, placeholder:"Current CTC*",  class:"form-control form-control-lg" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="form-outline">
+              <%= form.select :notice_period, options_for_select(Applyform::NOTICE_PERIOD),{ prompt: "Notice Period"}, placeholder:"Notice Period*", class:"form-select form-select-lg" %>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4"> 
+            <div class="form-outline">
+              <%= form.file_field :resume, placeholder:"Attach Resume*", class:"form-control form-control-lg"%>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12 mb-4 pl-0">
+          <div class="form-outline">
+            <%= form.text_field :skill, placeholder:"Describe Your Skills*", class:"form-control form-control-lg" %>
+          </div>
+        </div>
+
+        <div class="col-md-12 mb-4 pl-0">
+          <div class="form-outline">
+            <%= form.text_area :message, placeholder:"Message*", class:"form-control form-control-lg" %>
+          </div>
+        </div>
+
+        <div class="form-check d-flex justify-content-start ml-3 mb-4 pb-3 mt-5">
+          <%= form.check_box :pixoatic_terms, id:"termscheckbox", class:"form-check-input me-3 career-form-checkbox" %>
+          <%= form.label :pixoatic_terms, " I agree to the Terms and Conditions of Pixoatic.",  class:"text-secondary" %>
+        </div>
+
+        <div class="d-flex justify-content-center mt-4">
+          <%= form.submit "Submit", id: "applysubmitbtn",:disabled => true, class:"apply-submit-btn btn btn-primary text-white btn-block btn-lg gradient-custom-4 rounded-pill w-100" %>
+       
+        </div> 
+      <%end%>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var resetModalErrors = document.querySelectorAll("#reset-modal-errors");
+    resetModalErrors.forEach(element => {
+      element.addEventListener("click", function (event) {
+          var requestQuoteDiv = document.querySelector('#apply-form-div');
+          var errorContainer = requestQuoteDiv.querySelector('#error-container');
+          errorContainer.classList.add('d-none');
+       })
+    });
+    const termscheckbox = document.getElementById("termscheckbox");
+    const applysubmitButton = document.getElementById("applysubmitbtn");
+    const applyform = document.getElementById("applyform");
+    
+    termscheckbox.addEventListener("change", function () {
+      applysubmitButton.disabled = !termscheckbox.checked;
+    });
+
+    applysubmitButton.addEventListener("click", function (event) {
+      event.preventDefault();
+      const formData = new FormData(applyform );
+      
+      fetch(applyform.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').content,
+      },
+      })
+      .then((response) => response.json())
+        .then((data) => {
+         
+          if (data.success) {  
+            var requestQuoteDiv = document.querySelector('#apply-form-div');
+            var errorContainer = requestQuoteDiv.querySelector('#error-container');
+            errorContainer.classList.add('d-none');
+            alert("Thank you for your submission! We will review your message.");
+            applyform.reset();
+            applysubmitButton.disabled = true;
+          
+          } else {
+            var requestQuoteDiv = document.querySelector('#apply-form-div');
+            var errorContainer = requestQuoteDiv.querySelector('#error-container');
+            errorContainer.classList.remove('d-none');
+            var errors = data.errors.join("\n");
+            requestQuoteDiv.querySelector('#error-list').innerText = errors;
+          }
+        })
+      .catch((error) => {
+        alert("An error occurred: " + error.message);
+        
+      });
+      
+    });
+});
+
+</script>

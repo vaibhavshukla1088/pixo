@@ -1,0 +1,51 @@
+<section class="topsec" >   
+    
+    <div class="modal fade bd-example-modal-lg" id="redirectcontact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="border:none!important;">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <!-- Form -->
+                    <%= render "pixoatics/contactUs/contactus_form"%>   
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class=" border-secondary ">
+        <div class="row main ">
+            
+                <div class="col-12 col-md-8 col-xl-8 col-lg-8">
+                    <h2 class="main_head  text-left">Hire Software Developers by Software Development Technology</h2>
+                    <p class="main_body  text-left">
+                        Pixoatic Solutions is software development firm offering software developers for hire on an hourly, part-time or monthly basis. Pixoatic Solutions is an excellent choice as a software development agency, if you are looking to hire an on demand software engineer or a developers team in India. Take the services of highly skilled, experienced and dedicated software programmers for your project requirements.
+                    </p>
+                    <br>
+                    <button type="button" class="btn btn-primary rounded-pill btnhover ms-auto mb-5" data-bs-toggle="modal" data-bs-target="#redirectcontact" id="reset-contactus-modal-errors" >Talk to Our  Expert <i class="fa fa-arrow-right-long"></i></button>
+                </div>
+                <div class="col-12 pt-2 col-md-4 col-xl-4 col-lg-4">
+                    <%= image_tag('developers.jpg', class: 'img-fluid w-100 h-75', alt: 'developer') %>
+                </div>
+                <div class="hiresofware"><hr></div>
+        </div>        
+    </div>
+        
+    <div class="">
+        <div class="row main">
+            <p class="main_body  text-left">
+                We have a proven track record of profoundly fulfilled clients who have taken services of our hired on-demand engineers for mobile app development ,web development, android development, desktop development and numerous different tasks. Clients can hire our on demand engineers on flexible payment options like agreement, full time, part time or hourly, weekly monthly basis. All our hiring plans and services are available at very cost effective offers and you have the flexibility to choose our developers based on their skills to suit your project or budget requirements.
+            </p>            
+        </div>
+    </div>
+</section>
+
+
+<style>
+section.topsec  h2.main_head:hover{
+        color: #fff;
+              box-shadow: inset 1000px 0 0 0 #3EDCC2;
+      }
+
+</style>

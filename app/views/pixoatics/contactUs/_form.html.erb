@@ -1,0 +1,118 @@
+<section class="pixoatictouch">
+    <div class="">
+        <div class = "row main">
+            <div class = "col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                <h1 class = "mainhead mainheadingeffects">With Pixoatic you can:</h1>
+                <ul class="list-unstyled mt-3">
+                    <li class="mt-2">
+                        <%= image_tag("checkicon.png", class: "img-fluid") %>&nbsp; Develop products to take your business to the next level  
+                    </li>
+                    <li class="mt-2"><%= image_tag("checkicon.png", class: "img-fluid") %>&nbsp;  Launch products (MVP and onwards) with quick turnaround time
+                    </li>
+                    <li class="mt-2"><%= image_tag("checkicon.png", class: "img-fluid") %>&nbsp;  Flexibility to switch resources quickly</li>
+                </ul>
+                <div class = " mt-4">
+                    <h4 style="color: #222F9C; font-weight: 600;">TRUSTED BY</h4>
+                </div>
+                <div class = " imgsec">
+                    <div class = "">
+                        <div class="logos d-flex flex-wrap justify-content-lg-start flex-row">
+                            <%= image_tag("circle1.png", class: "img-fluid bounceicon", alt: "circle") %>
+                            <%= image_tag("codelab1.png", class: "img-fluid bounceicon", alt: "codelab") %>
+                            <%= image_tag("ideaa1.png", class: "img-fluid bounceicon", alt: "idea") %>
+                            <%= image_tag("hexa1.png", class: "img-fluid bounceicon", alt: "hexa") %>
+                            <%= image_tag("muzica1.png", class: "img-fluid bounceicon", alt: "muzica") %>
+                            <%= image_tag("lightal1.png", class: "img-fluid bounceicon", alt: "lightai") %>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class = "col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                <div class="box" id="contact_redirect">
+                    <div class ="mb-2" id="contact-us-errors">
+                        <%= render "layouts/share/errors" %>
+                    </div>
+                    <h1 class = "mainhead ">Fill the form below to say 'Hi!'</h1>
+                    <%= form_tag(on_contact_us_form_path, method: :post, remote: true, id: "myContactForm", class: "row g-3") do %>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-sm-1 mt-md-4">
+                            <%= text_field_tag 'name', nil, class: 'form-control', placeholder: 'Full Name*', required: true %>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-sm-1 mt-md-4">
+                            <%= text_field_tag 'email', nil, class: 'form-control', placeholder: 'Email*' %>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-sm-1 mt-md-4">
+                            <%= text_field_tag 'country', nil, class: 'form-control', placeholder: 'Country*' %>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-sm-1 mt-md-4">
+                            <%= text_field_tag 'skype', nil, class: 'form-control', placeholder: 'Skype' %>
+                        </div>
+                        <div class="col-sm-offset-2 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-sm-1 mt-md-4">
+                            <%= text_area_tag 'message', nil, class: 'form-control', rows: 1, placeholder: 'Message*' %>
+                        </div>
+                        <div class="d-lg-inline-flex justify-content-between">
+                            <div class="form-check  mt-sm-1 mt-md-4 ms-2">
+                                <input class="form-check-input" type="checkbox" value="" id="ndaCheckbox">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                 Get NDA
+                                </label>
+                            </div>
+                            <div class=" mt-sm-1 mt-md-4">
+                                <%= file_field_tag 'attachment', class: 'form-control', id: 'formFile' %>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-sm-1 mt-md-3">
+                            <button type="button" class="btn btn-primary rounded-pill mt-3 w-100 btnhover" id="myContactSubmit" disabled>Submit <i class="fa fa-arrow-right-long"></i></button>
+                        </div>
+                    <% end %>
+                </div> 
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const ndaCheckbox = document.getElementById("ndaCheckbox");
+        const submitButton = document.getElementById("myContactSubmit");
+        const form = document.getElementById("myContactForm");
+        const errorMessages = document.getElementById("errorMessages");
+    
+        ndaCheckbox.addEventListener("change", function () {
+        submitButton.disabled = !ndaCheckbox.checked;
+        });
+    
+        submitButton.addEventListener("click", function (event) {
+        event.preventDefault();
+        const formData = new FormData(form);
+        fetch(form.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+            "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').content,
+            },
+        })
+            .then((response) => response.json())
+            .then((data) => {
+            if (data.success) {
+                var requestQuoteDiv = document.querySelector('#contact-us-errors');
+                var errorContainer = requestQuoteDiv.querySelector('#error-container');
+                errorContainer.classList.add('d-none');
+                alert("Thank you for reaching out to us! Our team will get in touch with you soon.");
+                form.reset();
+                submitButton.disabled = true;
+                
+            } else {
+                var requestQuoteDiv = document.querySelector('#contact-us-errors');
+                var errorContainer = requestQuoteDiv.querySelector('#error-container');
+                errorContainer.classList.remove('d-none');
+                var errors = data.errors.join("\n");
+                requestQuoteDiv.querySelector('#error-list').innerText = errors;
+            }
+            })
+            .catch((error) => {
+            alert("An error occurred: " + error.message);
+            });
+        });
+    });  
+</script>

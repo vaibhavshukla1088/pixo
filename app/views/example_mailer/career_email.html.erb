@@ -1,0 +1,21 @@
+<h1>Canditate Details!!!!!!!!!!</h1>
+<hr>
+<h2>Details:</h2>
+<p>
+  <strong>Name:</strong> <%= @resource.full_name %><br>
+  <strong>Email:</strong> <%= @resource.email_address.downcase %><br>
+  <strong>Contact Number:</strong> <%= @resource.contact_number %><br>
+  <strong>Position:</strong> <%= @resource.position %><br>
+  <strong>Experience:</strong> <%= @resource.experience %><br>
+  <strong>Current CTC:</strong> <%= @resource.current_ctc %><br>
+  <strong>Notice Period:</strong> <%= @resource.notice_period %><br>
+  <strong>Skills:</strong> <%= @resource.skill %><br>
+  <% if @resource.resume.attached? %>
+    <strong>File:</strong> 
+    <u><span style="color: blue;">
+      <%= link_to @resource.resume.filename, rails_blob_url(@resource.resume, disposition: "attachment") %>
+    </span></ul><br>
+  <% end %>
+</p>
+<h2>Message:</h2>
+<p><%= @resource.message %></p>

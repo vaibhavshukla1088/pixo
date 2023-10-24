@@ -1,0 +1,26 @@
+.bottom-para{
+    background: transparent;
+}
+
+footer.footer{background: #F5F5FA;
+   }
+
+footer ul li.list-group-item{
+    padding: .5rem 0rem !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+footer a{
+    text-decoration: none;
+    color: #52525D;
+}
+
+footer a:hover{
+    text-decoration: none;
+    color: #52525D;
+}
+
+footer .mt8{
+    margin-top: -8px;
+}

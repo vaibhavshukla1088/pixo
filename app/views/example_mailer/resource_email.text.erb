@@ -1,0 +1,19 @@
+Resource Required!!!!!!!!!!
+===============================================
+
+Details:
+--------------------------
+
+Name: <%= @resource.full_name %>
+Email: <%= @resource.email.downcase %>
+Country: <%= @resource.country %>
+<% if @resource.phone.present? %>
+Phone_Number: <%= @resource.country_code %><%= @resource.phone %> 
+<%end%>
+Skype: <%= @resource.skype %>
+Technology Required: <%= @resource.technologies %>
+<% if @resource.resources != "specify in message" %>
+Resource Required: <%= @resource.resources %>
+<% end %>
+
+Message: <%= @resource.message %>
