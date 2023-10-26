@@ -1,0 +1,164 @@
+<section class="requesformmodal">
+  <div class="container pb-5 h-100">
+    <div class="row justify-content-center align-items-center">
+      <h2 class="apply-text text-center mb-4">Request Quote</h2>  
+
+      <%= form_with model: @model_name, url: on_demand_form_path,  id:"requestQuoteForm" do |form| %>
+
+        <div class ="mb-2" id="request-quote-div" >
+          <%= render "layouts/share/errors", object: @model_name %>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="form-outline">
+              <%= form.text_field :full_name, placeholder:"Full Name*",  class:"form-control form-control-lg" %>
+              
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4"> 
+            <div class="form-outline">
+              <%= form.email_field :email, placeholder:"Email Address*", class:"form-control form-control-lg"%>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="form-outline">
+              <%= form.text_field :country, placeholder:"Country*",  class:"form-control form-control-lg" %>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="form-outline selectPhoneCode d-flex justify-content-arround">
+              <select name="country_code" class="formSelect" style="background: #e0e0e09c;">
+              <% ISO3166::Country.countries.each do |country| %>
+                <option value="+<%= country.country_code%>" <%= 'selected' if country.alpha2 == 'IN'%>>   
+                  <%= "+#{country.country_code}"%>
+                </option>
+              <%end%>
+              <%= form.text_field :phone, placeholder:"9234567891",  class:"form-control form-control-lg" %>  
+            </select>
+            </div>
+          </div>
+        </div>
+
+         <div class="row">
+          <div class="col-md-12 mb-4">
+            <div class="form-outline">
+              <%= form.text_field :skype, placeholder:"Skype",  class:"form-control form-control-lg" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="form-outline">
+              <%= form.select :technologies, options_for_select(OnDemand::Form::TECHNOLOGIES),{ prompt: "Technologies*"}, { class: "form-select form-select-lg" } %>
+            </div>
+          </div>
+
+           <div class="col-md-6 mb-4">
+            <div class="form-outline">
+              <%= form.select :resources, options_for_select(OnDemand::Form::RESOURCES),{ prompt: "Resources Required*"}, { class: "form-select form-select-lg" } %>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-12 mb-4 pl-0">
+          <div class="form-outline">
+            <%= form.text_area :message, placeholder:"Message*", class:"form-control form-control-lg" %>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-4">
+          <%= form.submit "Submit" , id:"requestQuoteSubmitBtn", class:"apply-submit-btn btn btn-primary text-white btn-block btn-lg gradient-custom-4 rounded-pill w-100"  %>
+        </div> 
+      <%end%>
+    </div>
+  </div>
+</section>
+
+<style>
+ .form-select-lg, .form-control{color: #787b7e;
+     background-color:  #e0e0e09c;padding:15px;
+    }
+   h2 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+    color: #30303C;
+    }
+  
+  .selectPhoneCode .formSelect, .selectPhoneCode .formSelect:focus, .selectPhoneCode .formSelect:focus-visible {
+    width: 25%;
+    padding: 7px;
+    border: 1px solid #ced4da;
+    outline: none;border-radius: 4px;
+    }
+    
+
+    @media  (min-width:768px) and (max-width:991px){
+      .selectPhoneCode .formSelect, .selectPhoneCode .formSelect:focus, .selectPhoneCode .formSelect:focus-visible {
+      width: 60%;}
+    }
+
+    @media  (max-width:327px){
+      .selectPhoneCode .formSelect{
+         width: 60%;
+      }
+      
+    } 
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var resetModalErrors = document.querySelectorAll("#reset-1-modal-errors");
+    resetModalErrors.forEach(element => {
+      element.addEventListener("click", function (event) {
+        document.getElementById('error-container').classList.add('d-none')
+       })
+    });   
+    const requestQuoteSubmitBtn = document.getElementById("requestQuoteSubmitBtn");
+    const quoteform = document.getElementById("requestQuoteForm");    
+    requestQuoteSubmitBtn.addEventListener("click", function (event) {
+      event.preventDefault();
+      const formData = new FormData(quoteform);
+      
+      fetch(quoteform.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').content,
+      },
+      })
+      .then((response) => response.json())
+        .then((data) => {
+          if (data.success) {  
+            var requestQuoteDiv = document.querySelector('#request-quote-div');
+            var errorContainer = requestQuoteDiv.querySelector('#error-container');
+            errorContainer.classList.add('d-none');
+            alert("Thank you for your submission! We will review your message.");
+            quoteform.reset();
+          
+          } else {
+            var requestQuoteDiv = document.querySelector('#request-quote-div');
+            var errorContainer = requestQuoteDiv.querySelector('#error-container');
+            errorContainer.classList.remove('d-none');
+            var errors = data.errors.join("\n");
+            requestQuoteDiv.querySelector("#error-list").innerText = errors;
+          }
+        })
+      .catch((error) => {
+        alert("An error occurred: " + error.message);
+        
+      });
+      
+    });
+  });
+</script>

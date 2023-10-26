@@ -1,0 +1,18 @@
+databases:
+  - name: pixoatic
+    databaseName: pixoatic
+    user: pixoatic_user
+
+services:
+  - type: web
+    name: pixoatic
+    runtime: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: pixoatic
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false

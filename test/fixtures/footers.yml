@@ -1,0 +1,51 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  emailId: MyString
+  skypeId: MyString
+  behanceLink: MyString
+  instagramLink: MyString
+  linkedinLink: MyString
+  mainheading: MyString
+  head1: MyString
+  head1_body1: MyString
+  head1_body2: MyString
+  head2: MyString
+  head2_body: MyString
+  head3: MyString
+  head3_body1: MyString
+  head3_body2: MyString
+  head3_body3: MyString
+  head3_body4: MyString
+  head3_body5: MyString
+  Contact_heading: MyString
+  contact_head1: MyString
+  contact_head1_body1: MyString
+  contact_head1_body2: MyString
+  contact_head2: MyString
+  contact_head2_body1: MyString
+
+two:
+  emailId: MyString
+  skypeId: MyString
+  behanceLink: MyString
+  instagramLink: MyString
+  linkedinLink: MyString
+  mainheading: MyString
+  head1: MyString
+  head1_body1: MyString
+  head1_body2: MyString
+  head2: MyString
+  head2_body: MyString
+  head3: MyString
+  head3_body1: MyString
+  head3_body2: MyString
+  head3_body3: MyString
+  head3_body4: MyString
+  head3_body5: MyString
+  Contact_heading: MyString
+  contact_head1: MyString
+  contact_head1_body1: MyString
+  contact_head1_body2: MyString
+  contact_head2: MyString
+  contact_head2_body1: MyString

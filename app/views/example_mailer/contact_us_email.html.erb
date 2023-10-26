@@ -1,0 +1,17 @@
+<h1>Contact Details!!!!!!!!!!</h1>
+<hr>
+<h2>Details:</h2>
+<p>
+  <strong>Name:</strong> <%= @resource.name %><br>
+  <strong>Email:</strong> <%= @resource.email.downcase %><br>
+  <strong>Country:</strong> <%= @resource.country %><br>
+  <strong>Skype:</strong> <%= @resource.skype %><br>
+  <% if @resource.attachment.attached? %>
+    <strong>File:</strong> 
+    <u><span style="color: blue;">
+      <%= link_to @resource.attachment.filename, rails_blob_url(@resource.attachment, disposition: "attachment") %>
+    </span></ul><br>
+  <% end %>
+</p>
+<h2>Message:</h2>
+<p><%= @resource.message %></p>

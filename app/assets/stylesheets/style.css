@@ -1,0 +1,3205 @@
+
+/* common css start*/
+.btn-primary.btnhover{background: #222F9C;
+    color: #fff; border: 2px solid #fff; opacity: 1; transition: linear 1s;}
+    
+.btn-primary.btnhover:hover{background: #fff;
+        color: #222F9C; border: 2px solid #222F9C; opacity: 1; transition: linear 1s;}
+
+.card{background-color: none !important;}
+html{scroll-behavior: smooth;
+    margin: 0px !important;
+    padding: 0px !important;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;}
+
+body{overflow-x: hidden !important;}
+
+.main {
+	margin-left: 3em !important;
+	margin-right: 3em !important;
+}
+
+
+
+ /* common css :end */
+
+
+
+
+/* animations csss start */
+
+/* commonly used animation effects csss start */
+
+/* -------------------- for images effect start------------------------ */
+.zoomin img {
+    height: auto;
+    width: auto;
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -ms-transition: all 2s ease;
+    transition: all 2s ease;
+  }
+  .zoomin img:hover {
+      -ms-transform: scale(1.1); /* IE 9 */
+      -webkit-transform: scale(1.1); /* Safari 3-8 */
+      transform: scale(1.1); 
+  }
+
+/* -------------------- for images  effect end------------------------ */
+
+/* -------------------- for banner section effect start------------------------ */
+
+.bannerheading::before {
+    content: '';
+    border-bottom: solid 3px #3EDCC2;
+    position: absolute;
+    bottom: 0; left: 45%;
+    width: 0;
+    -webkit-transform: scale(0);
+       -moz-transform: scale(0);
+        -ms-transform: scale(0);
+         -o-transform: scale(0);
+            transform: scale(0); 
+  }
+  
+
+.bannerheading:hover::before {
+    border-bottom: solid thick #3EDCC2;
+    width: 10%;
+    -webkit-animation: heartbeat-x 1.7s infinite ease-in;
+            animation: heartbeat-x 1.7s infinite ease-in;
+  }
+  
+  .bannerheading:hover {
+    -webkit-animation: heartbeat 1.7s infinite ease-in;
+            animation: heartbeat 1.7s infinite ease-in;
+  }
+  
+  @-webkit-keyframes heartbeat {
+    0% { -webkit-transform: scale(1); }
+    10% { -webkit-transform: scale(1.1); }
+    20% { -webkit-transform: scale(1); }
+    30% { -webkit-transform: scale(1.1); }
+    40% { -webkit-transform: scale(1); }
+  }
+  
+  @-webkit-keyframes heartbeat-x {
+    0% { -webkit-transform: scaleX(0); }
+    10% { -webkit-transform: scaleX(1); }
+    20% { -webkit-transform: scaleX(0); }
+    30% { -webkit-transform: scaleX(1); }
+    40% { -webkit-transform: scaleX(0); }
+  }
+  
+  @keyframes heartbeat {
+    0% { transform: scale(1); }
+    10% { transform: scale(1.1); }
+    20% { transform: scale(1); }
+    30% { transform: scale(1.1); }
+    40% { transform: scale(1); }
+  }
+  
+  @keyframes heartbeat-x {
+    0% { transform: scaleX(0); }
+    10% { transform: scaleX(1); }
+    20% { transform: scaleX(0); }
+    30% { transform: scaleX(1); }
+    40% { transform: scaleX(0); }
+  }
+
+/* -------------------- for images section effect end------------------------ */
+
+/* -------------------- for heading effects start------------------------ */
+
+.js-development-text,section.whychoosereactjs .js-web-development, 
+     section.whywork .contacthead,
+    section.careerbenifits .benefits-heading, section.processsec .myprocesshead ,
+    section.benifits .reactnativeBenifits {display: grid; place-items: center;}
+    h1.mainheadingeffects {
+        box-shadow: inset 0 0 0 0 #3EDCC2;
+        color: #3EDCC2;
+          padding: 0 .25rem;
+          margin: 0 -.25rem;
+        transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+      }
+
+      h6.mainheadingeffects , h2.mainheadingeffects, section.pixoatictouch box h1.mainheadingeffects, 
+      section.whywork .contacthead h1.mainheadingeffects,
+      section.pixoaticcareer .career-banner-heading h1.mainheadingeffects,
+      section.servicesec h3.mainheadingeffects {
+        box-shadow: inset 0 0 0 0 #3EDCC2;
+       
+          padding: 0 .25rem;
+          margin: 0 -.25rem;
+        transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+      }
+      
+      section.topsec  h2.main_head:hover{
+        color: #fff;
+              box-shadow: inset 1000px 0 0 0 #3EDCC2;
+      }
+
+      section.servicesec h3.service-title:hover{color: #fff;
+        box-shadow: inset 500px 0 0 0 #3EDCC2;}
+      
+      h1.mainheadingeffects:hover, h2.mainheadingeffects:hover{
+        color: #fff;
+        box-shadow: inset 510px 0 0 0 #3EDCC2;
+      }
+      section.pixoaticcareer .career-banner-heading h1.mainheadingeffects:hover{
+        color: #fff;
+        box-shadow: inset 620px 0 0 0 #3EDCC2;
+      }
+
+      section.socialiconssec h1.mainheadingeffects:hover{
+        color: #fff;
+        box-shadow: inset 1056px 0 0 0 #3EDCC2;
+      }
+      section.processsec .myprocesshead h1.mainheadingeffects{color: #fff;}
+
+      section.processsec #myvales .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link{
+        color: #3EDCC2;
+    background-color: #fff;
+    border-color: #dee2e6 #3EDCC2 #fff;
+      }
+
+      section.processsec #myvales .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+        color: #3EDCC2;
+    background-color: #fff;
+    border-color: #3EDCC2 #3EDCC2 #3EDCC2;
+      }
+ 
+    section.benifits .reactnativeBenifits h1.mainheadingeffects{   color: #30303C;}
+      section.processsec .myprocesshead h1.mainheadingeffects:hover{
+        color: #fff;
+        box-shadow: inset 620px 0 0 0 #3EDCC2;
+      }
+      section.benifits .reactnativeBenifits h1.mainheadingeffects:hover{
+        color: #fff;
+        box-shadow: inset 950px 0 0 0 #3EDCC2;
+      }
+
+      section .career-bannr-heading h1.mainheadingeffects:hover{
+        color: #fff;
+        box-shadow: inset 620px 0 0 0 #3EDCC2;
+      }
+
+      section.whywork .contacthead h1.mainheadingeffects:hover{
+        color: #fff;
+        box-shadow: inset 800px 0 0 0 #3EDCC2;
+      }
+
+      section.pixoatictouch h1.mainheadingeffects:hover{
+        color: #fff;
+        box-shadow: inset 350px 0 0 0 #3EDCC2;
+      }
+    
+      section.whychoosereactjs h1:hover{
+        color: #fff;
+        box-shadow: inset 644px 0 0 0 #3EDCC2;
+      }
+      
+      section.careerbenifits .benefits-heading h1.mainheadingeffects:hover{
+        color: #fff;
+        box-shadow: inset 660px 0 0 0 #3EDCC2;
+      }
+
+
+    section.formsec .myformheading h6:hover{color: #fff;
+        box-shadow: inset 408px 0 0 0 #3EDCC2;}
+
+/* -------------------- for heading effects end------------------------ */
+
+
+
+
+/* commonly used animation effects csss end */
+
+
+/* -------------------- for career page effects start------------------------ */
+
+section.careerbenifits  .card::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 4px solid transparent;
+}
+
+section.careerbenifits  .card:hover::before {
+    animation: animate 1s linear forwards;
+}
+ 
+@keyframes animate {
+    0% {
+        width: 0;
+        height: 0;
+        border-top-color: #3EDCC2;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+ 
+    50% {
+        width: 100%;
+        height: 0;
+        border-top-color: #3EDCC2;
+        border-right-color: #3EDCC2;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+ 
+    100% {
+        width: 100%;
+        height: 100%;
+        border-top-color: #3EDCC2;
+        border-right-color: #3EDCC2;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+}
+
+section.careerbenifits  .card::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 4px solid transparent;
+}
+ 
+section.careerbenifits  .card:hover::after {
+    animation: animates 1s linear forwards;
+}
+ 
+@keyframes animates {
+    0% {
+        width: 0;
+        height: 0;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: #3EDCC2;
+    }
+ 
+    50% {
+        width: 0;
+        height: 100%;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: #3EDCC2;
+        border-left-color: #3EDCC2;
+    }
+ 
+    100% {
+        width: 100%;
+        height: 100%;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: #3EDCC2;
+        border-left-color: #3EDCC2;
+    }
+}
+
+
+/* readmore btn efects career start */
+
+a.btn2{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  a.btn2:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    top: -60%;
+    font-size: 40px;
+    left: 87%;
+    transition: 0.5s;
+  }
+  
+  a.btn2:hover{
+    padding-right: 24px;
+    padding-left:8px;
+  }
+  
+  a.btn2:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+
+    /* readmore btn efects career end */
+
+
+
+
+/* -------------------- for career page effects end------------------------ */
+
+
+
+    /* ror page effects start */
+ 
+    section.ourror .agile h1:hover, section.rails_dev_servicesec .card-body:hover .line {
+        width: 10px;
+        animation: grow 1s linear;
+        animation-fill-mode: forwards;
+       animation-duration: 1.9s;
+      }
+      
+      @keyframes grow {
+        100% {
+          width: 100%;
+        }
+      }
+
+    /* ror page effects end */
+
+    /* -------------------- for contact page ,reactjs page, reactnative page effetcs start------------------------ */
+
+      /* bounce effects start */
+   
+  section .js-development-services .card-body:hover img.bounceicon 
+  ,section .js-development-services .card-body:hover h5.bounceicon, .bounceicon:hover, 
+  section.whywork .card-body:hover h1.bounceicon,
+  section.whywork .card-body:hover img.bounceicon {
+     animation: bounce 1s;
+ }
+ 
+
+ @keyframes bounce {
+     0%, 20%, 60%, 100% {
+         -webkit-transform: translateY(0);
+         transform: translateY(0);
+     }
+ 
+     40% {
+         -webkit-transform: translateY(-20px);
+         transform: translateY(-20px);
+     }
+ 
+     80% {
+         -webkit-transform: translateY(-10px);
+         transform: translateY(-10px);
+     }
+ }
+
+ /* ------------------------------ for contact page ,reactjs page, reactnative page effetcs end------------------------ */
+
+    /* bounce effects end */
+
+    
+
+/* animations csss end */
+
+
+/* home page css start */
+
+section.logos img{
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+
+
+section.whywework .points{
+    min-height: 150px;
+}
+
+section.wedo .paddbothside{
+    padding: 0px 133px;
+}
+
+section.ourwork .carousel-inner{
+    background: #C4EDE8;
+    height: 366px;
+}
+
+section.ourwork {margin-bottom: 80px;}
+
+section.ourwork  .carousel-caption{
+    position: inherit;
+    padding-top: 9.25rem;
+    text-align: inherit !important;
+    left: 2%;
+}
+section.ourwork .carousel-indicators [data-bs-target] {
+    width: 9px !important;
+    height: 8px !important;
+
+    border-radius: 50% !important;
+
+}
+
+section.ourwork .carousel-dark .carousel-indicators [data-bs-target] {
+    background-color: #1c4581;
+}
+
+section.ourwork .carousel-indicators [data-bs-target] {background-color: #fff;}
+
+section.ourwork .carousel-indicators{
+    bottom: -47px !important;
+}
+
+section.homebner .boxhead span::after{
+    content: '' ;
+    position: absolute;
+    width: 176px;
+    height: 120px;
+    z-index: -1;
+    background-image: radial-gradient(#e1e1d9 2px, transparent 0);
+    background-size: 24px 20px;
+    left: -7px;
+}
+
+ section.homebner .boxhead span::before{
+    content:'';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: #F5F5FA;
+    border-radius: 50%;
+    z-index: -1;
+} 
+
+section.whywework .card{background: transparent;border: none;}
+
+section.whywework .card-body{padding: 0px;}
+
+
+/* ///////////////////by company ///////////////////// */
+
+
+
+/* bannersec start */
+
+.banner-heading {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 57px;
+    display: flex;
+    align-items: center;
+    color: #30303C;
+
+}
+
+.banner-desc {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+}
+
+.space6{
+	margin-top:4em;
+}
+
+
+/* add css 7/7/23 by shefali */
+
+.bannerbg{
+    background-image: url("images/bannerbg.jpg"); 
+    /* background-color: #cccccc;  */
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+
+}
+
+/* bannersec end */
+
+/* service se start */
+
+
+
+
+.service-heading {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 45px;
+    color: #30303C;
+}
+
+.service-title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #30303C;
+}
+
+.service-body {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;    
+    color: #52525D;
+}
+
+.space6{
+	margin-top:4em;
+}
+
+/* service se end */
+
+/* we sec start */
+
+.wedo_head {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+    color: #30303C;
+}
+
+.wedo_body {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #52525D;
+}
+
+.wedo_title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #30303C;
+}
+
+.wedo_des {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+}
+
+.whywork_mainhead {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    color: #30303C;
+}
+
+.whywork_mainbody {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+}
+
+.numberCircle {
+    border-radius: 50%;
+    max-width: 80px;
+    min-height: 80px;
+    background: rgba(255, 118, 2, 0.2);
+    color: #30303C;
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+}
+
+.numberCircle2 {
+    background: rgba(68, 211, 0, 0.2);
+}
+
+.numberCircle3 {
+    background: rgba(0, 204, 180, 0.2);
+}
+
+.numberCircle4 {
+    background: rgba(0, 85, 211, 0.2);
+}
+
+.whywork_title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #30303C;
+}
+
+.whywork_desc {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D
+}
+
+/* .carousel-item img {
+    width: 100px;
+    height: 80vh;
+} */
+
+section.ourwork .carousel-control-prev-icon {
+    color: blue;
+}
+
+.fitem2 {
+	width: 360px;
+    display: flex;
+    text-align: right;
+}
+
+.row {
+	margin-left: 0 px;
+	margin-right: 0px;
+}
+
+/* we sec end */
+
+/* why work sec css */
+.whywork_mainhead {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    color: #30303C;
+}
+
+.whywork_mainbody {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+}
+
+/* why work sec css end */
+
+
+/* ///////////////////// by company end ///////////////////////// */
+
+
+/* home page css end */
+
+/* model page css start */
+section.modelbox .modal-header{
+    border-bottom: 0px;
+}
+
+section.modelbox .modal-body h1{font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    color: #30303C; text-align: center;}
+
+ section.modelbox .modal-body   .form-check-input{background-color: transparent;}
+
+ section.modelbox .modal-body .form-control {
+
+    background-color: #edeff0;}
+
+ section.modelbox .modal-body   .form-select {
+        color: #6f7377;
+        background-color: #edeff0;}
+
+/* model page css end */
+
+
+
+
+
+
+/* service page css start */
+
+section.Technologies{
+    padding-bottom: 45px;
+}
+
+section.ourworkservice .mrgnbtm img{
+    position:absolute; top: -61px;
+    border-radius: 50%;
+     padding: 20px;
+    background: #FF7602;
+}
+
+
+section.servicesec{
+    margin-top: 55px;
+}
+
+section.approachservice .agile h1{
+    border-bottom: 3px solid #222F9C;
+    border-block-width: 5px;
+    width: 80px;
+}
+
+
+/* ///////////////////////// by company/////////////////// */
+
+
+
+
+/* banner css start */
+.main{
+    margin-top: 4% !important;
+   
+ }
+
+.heading h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 57px;
+    text-align: center;
+    color: #30303C;
+}
+
+
+/* banner css end */
+
+
+/* customerservice css */
+
+
+
+.text1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 38px;
+    color: #30303C;
+}
+
+.text2{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+}
+.text3{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #222F9C;
+
+}
+.text4{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+}
+
+
+/* customerservice css end */
+
+
+/* industry sec css */
+
+
+.group2{
+    margin-top: 4%;
+    background: linear-gradient(90.06deg, #06C0A4 0.05%, #07B095 72.99%);
+} 
+
+.img1{
+    margin-left: 13%;
+    background: url(2045.png);
+    mix-blend-mode: luminosity;   
+}
+.g2text1{
+    margin-top: 7%;
+  
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    color: #FFFFFF;
+}
+.g2text2{
+  
+    margin-top: 2%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}   
+
+/* industry sec css end */
+
+
+/* approach sec css start */
+
+
+/* group4 css */
+
+.Group4{
+    width: auto;
+    margin-top: 5%;
+    margin-right: 5%;
+    
+}
+
+
+
+.Group4 h1{
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+    color: #30303C;
+}
+    
+.Group4 p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #52525D;
+}
+
+.group4text1{
+    margin-left: 15%;
+}
+
+.agile h1{   
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #30303C;
+}
+
+section.ourror .para1 p, .para1 p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+}
+
+
+
+.transparenct h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #30303C;
+}
+
+.teamwork h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #30303C;
+}
+
+.flexibility h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #30303C;
+}
+
+
+.para2 p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+}
+
+.para3 p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+}
+
+.para4 p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+}
+
+
+/* approach sec css end */
+
+
+/* ourwork sec css start */
+
+.g3-text1{
+    margin-top: 4%;
+    text-align: center;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    color: #30303C;
+}
+
+.g3-text2{
+    text-align: center;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+}
+
+/* .card{
+    min-height: 250px;
+} */
+
+.cardtitle1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #30303C;
+}
+.cardtext1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+}
+
+.cardlogo1{
+
+    border-radius: 50%;
+    width: 70px;
+    background: #FFD8B8;
+    margin-top: -11%;
+}
+
+.cardlogo2{
+    border-radius: 50%;
+    width: 70px;
+    background: #CAF3B7;
+    margin-top: -11%;
+}
+
+
+.cardlogo3{
+    margin-top: -11%;
+    width: 70px;
+    border-radius: 50%;
+    background: #B7CFF3;   
+}
+
+
+/* ourwork sec css end */
+
+
+
+/* technology sec css start */
+
+
+.Technologies{
+    background: #F5F5FA;
+    width: auto;
+}
+
+.t-text1{
+    text-align: center;
+    padding-top: 4%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    color: #30303C;
+}
+
+.t-text2{
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+    
+}
+
+/* .card{
+    min-height: 300px !important;
+    background: #F5F5FA;
+    
+} */
+
+
+.ruby-rails-developer h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #30303C;
+}
+
+.ruby-rails-developer p{
+    text-align: start;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+}
+
+.button1{
+    border-radius: 30px;
+    margin-bottom: 4%;
+} 
+
+
+
+.react-native-developer h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #30303C;
+}
+
+.react-native-developer p{
+    text-align: start;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+}
+
+.button2{
+    border-radius: 30px;
+    margin-bottom: 4%;
+}
+
+
+
+.react-js-developer h1{
+   
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #30303C;
+}
+
+.react-js-developer p{
+    text-align: start;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+}
+
+.button3{
+    border-radius: 30px;
+    margin-bottom: 4%;
+   
+} 
+
+
+/* technology sec css end */
+
+/* ///////////////////////// by company end /////////////////// */
+
+
+
+/* service page css end */
+
+
+
+/* benifits page css start */
+
+section.benifits {
+    background: #F5F5FA;
+}
+
+section.projectidea h5{font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #30303C;
+position: relative;}
+
+section.benifits .ruby-rails-developer h5, section.benifits  .react-native-developer h5.testing ,
+section.benifits .react-js-developer h5.process {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: #30303C;
+position: relative;
+}
+
+section.benifits  .card2:hover .react-native-developer h5.testing ,
+section.benifits .card2:hover .react-js-developer h5.process {
+  
+    color: #fff;
+
+}
+
+
+    section.benifits   .card-title, section.projectidea .card-body{
+        margin-left: 0px;
+    }
+
+    section.benifits .card-body, section.projectidea .card-body{
+        background-color: transparent !important;
+        border: none !important;
+    }
+
+    section.benifits .card, section.projectidea .card{
+        background-color: transparent;
+        
+    }
+
+    section.benifits .card-body::after, section.projectidea .card-body::after{
+        content: "";
+        border-left: 4px solid  #3EDCC2;
+        height: 56px;
+        position: absolute;
+        left: 0;
+        top: 23px;
+    }
+
+    section.reactnativedevsec .card-body{
+        background: #F5F5FA!important;
+    }
+
+    section.reactnativedevsec .card:hover{
+        transform: translateY(-10px);
+    }
+
+/* benifits page css end */
+
+/* reactnative page css start */
+
+section.socialiconssec h1{
+    text-align: start;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 39px;
+    color: #30303C;
+}
+
+section.socialiconssec a.fbicon img:hover{border-radius: 20px;    
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 2.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: linear 0.9s;}
+
+section.socialiconssec a.instaicon img:hover{border-radius: 30px;    
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 2.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+       transition: linear 0.9s;}
+
+section.socialiconssec a.scloudicon img:hover{border-radius: 25px;    
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 2.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+       transition: linear 0.9s;}
+
+section.socialiconssec a.walmrticon img:hover{border-radius: 20px;    
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 2.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+       transition: linear 0.9s;}
+
+section.socialiconssec .donsmall a.fbicon::after{
+    content: "Facebook";
+    position: absolute;
+    top: 103px;
+    right: 16px;
+    font-size: 16px;
+    color: #000;
+    
+}
+
+section.socialiconssec .donsmall a.instaicon::after{
+    content: "Instagram";
+    position: absolute;
+    top: 102px;
+    right: 12px;
+    font-size: 16px;
+    color: #000;
+    
+}
+
+section.socialiconssec .donsmall a.scloudicon::after{
+    content: "SoundCloud";
+    position: absolute;
+    top: 102px;
+    right: 3px;
+    font-size: 16px;
+    color: #000;
+    
+}
+
+section.socialiconssec .donsmall a.walmrticon::after{
+    content: "Walmart";
+    position: absolute;
+    top: 100px;
+    right: 18px;
+    font-size: 16px;
+    color: #000;
+    
+}
+
+section.socialiconssec .donfull a.fbicon::after{
+    content: "Facebook";
+    position: absolute;
+    top: 135px;
+    right: 32px;
+    font-size: 16px;
+    color: #000;
+    
+}
+
+section.socialiconssec .donfull a.instaicon::after{
+    content: "Instagram";
+    position: absolute;
+    top: 134px;
+    right: 29px;
+    font-size: 16px;
+    color: #000;
+    
+}
+
+section.socialiconssec .donfull a.scloudicon::after{
+    content: "SoundCloud";
+    position: absolute;
+    top: 134px;
+    right: 22px;
+    font-size: 16px;
+    color: #000;
+    
+}
+
+
+
+section.socialiconssec .donfull a.walmrticon::after{
+    content: "Walmart";
+    position: absolute;
+    top: 132px;
+    right: 36px;
+    font-size: 16px;
+    color: #000;
+}
+section.processsec #myGroup .midddlebox ul.first-text li  a{padding-bottom: 40px;}
+section.processsec #myvales .midddlebox ul.first-text li  button.nav-link:active{color: #00dcdf!important;text-decoration: none;}
+section.processsec #myvales .midddlebox ul.first-text li button.nav-link:focus,
+section.processsec #myvales .midddlebox ul.first-text li button.nav-link{color: #00dcdf!important;text-decoration: none;}
+/* section.processsec #myGroup .midddlebox h5.first-text */
+section.processsec #myGroup .midddlebox ul.first-text li a,
+section.processsec #myGroup .midddlebox ul.first-text li a.nav-link{color: #fff;}
+
+
+section.processsec #myGroup .midddlebox ul.first-text li a.nav-link:link, 
+section.processsec #myGroup .midddlebox ul.first-text li a.nav-link:active, 
+section.processsec #myGroup .midddlebox ul.first-text li a.nav-link:focus{color: #00dcdf!important;text-decoration: none;}
+
+
+/* reactnative page css end */
+
+
+section.questionsec .accordion-button:not(.collapsed){ font-family: 'Poppins';
+  
+    color: #30303C !important;}
+
+    section.questionsec .accordion{
+        margin-top: -40px;
+    }
+
+    section.questionsec  .accordion-button{
+        font-size: 22px;
+        position: relative;
+        padding-left: 0px;
+    }
+
+    section.questionsec  .accordion-item{
+        border-top: 1px solid #52525D;
+        border-bottom: 1px solid #52525D;
+        border-left: 0;
+        border-right: 0;
+    }
+    section.questionsec .accordion-button::after{position: absolute;
+        right: 8px;}
+
+    section.questionsec .accordion .card-body{padding-left: 0px;}
+
+    section.processsec #myGroup  .midddlebox ul{position: relative;}
+    section.processsec #myGroup .midddlebox ul li a::after{
+        content: "";
+    border-left: 1px solid #a4a7a6;
+    height: 48px;
+    position: absolute;
+    right: 50%;
+    
+    margin: 35px 0px;
+    }
+
+    
+    section.processsec #myGroup  .midddlebox ul li a.lastchild::after { display: none; }
+  
+    section.rorbanner .paragraph p{font-size: 20px;}
+  
+
+    /* ondemand page start */
+    div.hiresofware hr{opacity: 1;}
+section.whywork .mrgntopfull{margin-top: 30px;}
+section.whywork{margin-bottom: 65px;
+    margin-top: 40px;}
+
+.formsec .formbox img{position: relative;
+    height: 671px;
+object-fit: cover;}
+
+section.formsec  form   .form-select {
+    color: #6f7377;
+    background-color: transparent; border-bottom: 1px solid #ced4da; 
+    border-top: 1px solid transparent!important;
+    border-left: 1px solid transparent!important;
+    border-right: 1px solid transparent!important;padding: 0px;}
+
+    section.formsec  form   .form-select {
+        box-shadow:none!important;
+       }
+
+section.whywork  .mainhead {text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    color: #30303C;}
+
+    /* /////////////////////// by comany //////////////////////// */
+    .banner_head {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 57px;
+        text-align: center;
+        color: #30303C;
+    }
+    
+    .banner_desc {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #52525D;
+    }
+
+/* Hire Software Developers start */
+
+
+
+
+
+/* Hire Software Developers end  *?
+
+
+/* Different Types of On-demand Developers start start */
+.main_head {
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 45px;
+
+color: #30303C;
+}
+.main_body {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+}
+.head {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #30303C;
+}
+.body {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+}
+    /* /////////////////////// by comany end //////////////////////// */
+
+/* ondemand page end */
+
+
+/* ///////////////////////////////// ror page by company ///////////////////// */
+
+
+
+/* banner css start */
+
+.heading h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 57px;
+    text-align: center;
+    color: #30303C;
+}
+
+/* banner css end */
+
+
+/* about pixioatic solution css start */
+
+.pixoaticsolution{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    
+}
+.solution-text {
+   
+    text-align: start;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #52525D;
+}
+
+
+
+/* ror developement process css start */
+
+.Group4{
+    margin-top: 5%;
+    background: #30303C;
+}
+
+.heading3{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+    color: #FFFFFF;
+} 
+
+.description{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #F5F5FA;
+
+}
+
+.discovery-heading{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+
+}
+
+.discovery-text{
+    text-align: start;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.design-heading{
+    text-align: start;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    color: #FFFFFF;
+}
+
+.design-text{
+    text-align: start;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.development-heading{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.development-text{
+    text-align: start;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.testings-heading{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.testings-text{
+    text-align: start;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.deployment-heading{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.deployment-text{
+    text-align: start;
+    margin-bottom: 10%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.process-img{
+   margin-left: -15%;
+  
+}
+
+.line1{
+    background: #3EDCC2 !important;
+    margin-right: 10rem !important;
+    border-radius: 25px;
+    height: 5px !important;
+}
+
+/* ror developement process css end */
+
+
+/* ror project idea css start */
+
+.text1{
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    color: #30303C;
+    
+  }
+  
+  .description1{
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+  }
+  
+  /* .card2{ 
+    margin-left: 0%;
+  } */
+  
+  .skills{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+    color: #52525D;
+  }
+  
+  .skills-text{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: #52525D;
+  }
+  
+  .testing{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+    color: #30303C;
+  }
+  
+  .testing-text{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+  }
+  
+  .process{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+    color: #30303C;
+  }
+  
+  .process-text{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+  }
+  
+  .line-img{
+    margin-left: -4%;
+  }
+  
+ 
+  
+  
+
+
+/* ror developement service css start */
+.development_services{
+    background: #F5F5FA;
+}
+.heading1{
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    color: #30303C;
+}
+
+.text{
+   
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+}
+
+.js-text1 h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    color: #FFFFFF;
+}
+
+
+.js-text1 p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+
+.ruby-rails-custom-application-development h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    color: #30303C;
+}
+
+.ruby-rails-custom-application-development p{
+    text-align: start;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+}
+
+.ruby-rails-portal-development h1{
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    color: #30303C;
+
+}
+
+.ruby-rails-portal-development p{
+    text-align: start;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+
+}
+
+.ruby-rails-ecommerce-development h1{
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    color: #30303C;
+
+}
+
+.ruby-rails-ecommerce-development p{
+    text-align: start;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+}
+
+.line{
+    background: #3EDCC2 !important;
+    border-radius: 25px;
+    height: 7px !important;
+}
+
+/* ror developement service css end */
+
+/* //////////////////////////////// ror page by company end //////////////////// */
+
+
+
+/* //////////////////////////////// reactjs page by company start //////////////////// */
+
+
+
+/* banner sec start */
+
+
+.heading h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 57px;
+    text-align: center;
+    color: #30303C;
+}
+
+
+/* banner sec end */
+
+
+/* about reactjs service sec start */
+
+.js-service-banner{
+    margin-top: 100px;
+    margin-bottom: 80px;
+    
+}
+
+.service-banner-heading h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    color:  #30303C;
+}
+
+.service-banner-description p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color:  #52525D;
+}
+
+/* about reactjs service sec end */
+
+
+/*  reactjs service sec start */
+
+.js-development-services{
+    background-color: #F5F5FA;
+    padding-bottom: 100px;
+ 
+}
+
+.js-development-text h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center !important;
+    color: #30303C;
+}
+
+.js-development-text p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #52525D;
+}
+
+/* .card-body h5{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #30303C;
+} */
+
+
+
+
+.bi{
+    font-size: 30px !important;
+    color: #3EDCC2;
+}
+
+/*  reactjs service sec end */
+
+
+
+/*  why choose reactjs service sec start */
+
+.js-web-development{
+    background-color: #30303C;
+    padding-bottom: 80px;
+}
+
+.js-web-development-text h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.js-web-development-text p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+
+
+
+/*  why choose reactjs service sec end */
+
+/* //////////////////////////////// ror page by company end //////////////////// */
+
+
+/* //////////////////////////////// react native page by company start //////////////////// */
+
+
+/* banner css start */
+
+.heading h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 57px;
+    text-align: center;
+    color: #30303C;
+}
+
+
+/* banner css end */
+
+
+.custom-submit-button {
+    box-sizing: border-box;
+    width: 138px;
+    height: 56px;    
+    background: #222F9C;
+    border-radius: 30px;
+}
+.background-img {
+
+  background-image: url("images/reactformbg.jpg") !important;
+  background-size: 100% 100%; 
+  background-position: center;
+ 
+}
+
+.head1{
+    margin-left: 5.8% !important;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 45px;
+    color: #30303C;
+}
+
+.head2 { 
+    margin-left: 5.8% !important;    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    color: #30303C;
+}
+.form-field{
+    margin-left: 5% !important; 
+    border-bottom: 1px solid #52525D !important;
+    background-color: #f2f2f2 !important;
+    opacity: 0.5 !important;
+}
+
+.form-button{
+    margin-left: 5% !important; 
+}
+
+
+/* reactform css end */
+
+/* react native banner start */
+
+
+
+.react-native{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    
+}
+.react-native-text {
+    text-align: start;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    color: #30303C;
+}
+
+.react-native-description{
+    margin-left: 16% !important;
+    text-align: start;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+}
+
+.react-native-description1 {
+    text-align: start;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+}
+
+
+
+.img{
+    max-height: 170px !important;
+    min-height: 170px !important;
+    min-width: 140px !important;
+    max-width: 140px !important;
+}
+
+/* react native banner end */
+
+/* react native dev start */
+
+.react-native-development{
+    margin-top: 6%;
+}
+
+.main-heading1{
+ 
+    text-align: start;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #30303C;
+}
+
+.card-text{
+    text-align: start;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #30303C;
+}
+
+
+.question-button1{
+    border: 2px solid #3EDCC2;
+    background-color: white;
+    color: #3EDCC2;
+    font-size: 12px;
+    cursor: pointer;
+    border-color: #3EDCC2;
+}
+  
+/* react native dev end */
+
+
+/* react native hriring  start */
+
+.ror-developer{
+    margin-top: 8% !important;
+}
+.text1{
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    color: #30303C;
+    
+  }
+  
+  .description1{
+   
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+  }
+  
+  .card2{ 
+    margin-left: 0%;
+  }
+  
+  
+  .skills{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+    color: #52525D;
+  }
+  
+  .skills-text{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27px;
+    color: #52525D;
+  }
+  
+  .testing{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+    color: #30303C;
+  }
+  
+  .testing-text{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+  }
+  
+  .process{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+    color: #30303C;
+  }
+  
+  .process-text{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+  }
+
+  .line-img{
+   margin-left: -4% !important;
+  }
+
+  
+
+  .card2:hover {
+    background: #222F9C;transition: linear 1s;
+    
+    .testing{
+      color: #FFFFFF;
+    }
+    .testing-text{
+      color: #FFFFFF;
+    }
+    .process{
+      
+      color: #FFFFFF;
+    }   
+    .process-text{
+      color: #FFFFFF;
+    }
+
+  }
+
+  .card1:hover {
+    background: #222F9C;transition: linear 1s;
+    .skills{
+      color: #FFFFFF;
+    }
+
+    .skills-text{
+      color: #FFFFFF;
+    }
+
+  }
+/* react native hriring  end */
+
+
+
+/* react native process  start */
+
+section.socialiconssec .donsmall{display: none;}
+section.socialiconssec .donfull{display: block;}
+/* section.processsec #myGroup{display: block;} */
+
+/* section.processsec #myvales{display: none;} */
+.React-Native-Process{
+    margin-top: 5%;
+    padding-bottom: 10% !important;
+    
+}
+
+.heading3{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+    color: #FFFFFF;
+} 
+
+.description{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #F5F5FA;
+}
+
+.first-heading{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+
+.first-text{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #fff;
+}
+
+
+.explore-heading{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+    display: flex;
+    color: #FFFFFF;
+}
+
+.explore-text{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+    color: #FFFFFF;
+} 
+
+
+.client-heading{
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.client-text{
+    margin-top: 5%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+
+
+.client-requirement-heading{
+   
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.client-requirement-text{
+    margin-top: 5%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+
+
+.deployment-heading{
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.deployment-text{
+    margin-top: 5%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+
+.logo-button{
+    
+    border: 2px solid #3EDCC2;
+    background-color: #30303C;
+    color: #3EDCC2;
+    border-color: #3EDCC2;
+    text-align: center;
+    padding: 9px;
+    line-height: 14px;
+    height: 35px;
+    text-decoration: none;
+} 
+
+/* react native process  end */
+
+/* react native ques  sec start */
+.main-heading{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+    color: #30303C;
+}
+
+.border-line{
+    border-bottom: 1px solid #52525D;
+   
+    margin-top: -2.5%;
+
+}
+
+.ror-heading1{
+    margin-left: 5.8% !important; 
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    color: #30303C;
+}
+
+.ror-para1{
+    margin-left: 5.8% !important; 
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #52525D;
+    margin-bottom: 2%;
+}
+
+.ror-question{
+    margin-left: 5.8% !important; 
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    color: #30303C;
+}
+
+.question-button1{
+  border: 2px solid #3EDCC2;
+  background-color: white;
+  color: #3EDCC2;
+  font-size: 12px;
+  cursor: pointer;
+  border-color: #3EDCC2;
+  margin-left: 98%;
+}
+
+
+.question-button2{
+    border: 2px solid #3EDCC2;
+    background-color: white;
+    color: #3EDCC2;
+    font-size: 12px;
+    cursor: pointer;
+    border-color: #3EDCC2;
+    margin-left: 98%; 
+
+}
+
+/* react native ques  sec end */
+
+
+
+
+/* //////////////////////////////// react native page by company end //////////////////// */
+
+
+/* hiring form page css start */
+   section.formsec .form-control{
+    border:none;
+    border-bottom: 1px solid #606569;
+    padding: 7px 0px;
+    outline: none;
+    background-color: transparent;
+   }
+
+   section.formsec  .form-control:focus {
+    box-shadow:none!important;
+   }
+
+   section.formsec .box{
+   height: inherit;
+   padding-bottom: 39px;
+ background-size: cover !important;
+ background-repeat: no-repeat;
+ background-position: center;
+ background: #F5F5FA;
+
+   }
+   section.rails_dev_servicesec .card-body{padding: 0px !important;}
+
+   section.rails_dev_servicesec .card{background: transparent !important;}
+
+   section.rails_dev_servicesec .mrgintop{margin-top: 0px !important;}
+
+   .forntssizepara{
+    text-align: start;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 36px;
+    color: #30303C;
+   }
+
+/* hiring form page css end */
+
+
+
+/* reactjs developer page start */
+
+section.reacjsques h1{font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+    color: #30303C;}
+  
+    section.whychoosereactjs .boxsec, section.careerbenifits .boxsec{position: relative;}
+    section.whychoosereactjs .card::after {content: "";
+        border-left: 4px solid #3EDCC2;
+        height: 56px;
+        position: absolute;
+        left: 0;
+        top: 0;}
+
+        section.careerbenifits .boxsec::after, section.whychoosereactjs .boxsec::after {content: "";
+            border-left: 4px solid #3EDCC2;
+            height: 56px;
+            position: absolute;
+            left: 0;
+            top: 20px;}
+
+
+            section.whychoosereactjs .boxsec{position: relative;padding: 20px;}
+/* reactjs developer page end */
+
+
+
+/* contact us page sec start */
+
+section.gettouch .cardtitle1{font-size: 22px;
+    line-height: 29px;}
+
+    section.gettouch  .card{border: none; background: none;}
+
+    section.pixoatictouch{margin-bottom: 77px; margin-top: 80px;}
+
+    section.pixoatictouch .mainhead{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 45px;
+        color: #30303C;}
+
+        section.pixoatictouch ul li, section.gettouch p,p{    font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #52525D;} 
+
+     section.pixoatictouch .imgsec img   {-webkit-filter: grayscale(100%);
+            filter: grayscale(100%);}
+
+    section.pixoatictouch  .box{background: #F5F5FA;  border-radius: 10px;padding: 20px; box-shadow: 0px 0px 15px -3px grey; }
+
+    section.mapsec .card-body{padding: 0px;}
+    section.mapsec h1.mainhead1{ font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 45px;
+        color: #30303C;}
+
+    section.mapsec .card   {box-shadow: 0px 0px 10px -3px grey;}
+
+    section.mapsec img.mapimg {object-fit: none;}
+
+    section .hideonmain{display: block;}
+      section  .hideonsmall{display: none;}
+
+/* contact us page sec end */
+
+
+/* career page sec start */
+
+
+
+section.careerbenifits .boxsec h1, section.careerbenifits .boxsec p{ color: #30303C;}
+
+/* section.careerbenifits .boxsec h1{font-size: 22px;line-height: 32px;font-weight: 500 !important;} */
+section.careerbenifits .card{background-color: transparent;}
+
+ section.careerbenifits h1.js-text1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 29px;
+    color: #30303C;
+} 
+
+section.join-us .benefits-headingcontent h1.js-text1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #30303C;
+} 
+
+section.join-us .benefits-headingcontent h1.js-text1:hover, section.reacjsques h1:hover,
+section.whywork h1.mainhead:hover, section.development h1.main_head:hover ,
+section .Technologies h1.t-text1:hover, section.ourworkservice h1.g3-text1:hover,
+section.approachservice .Group4  h1:hover, section.wedo h1.wedo_head:hover, section.ourwork h1.wedo_head:hover,
+section.servicesec  h5.service-heading:hover{
+   
+    color: #3EDCC2;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+} 
+
+
+section.careerbenifits .js-text1 p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #30303C;
+}
+
+
+section.careerbenifits .benefits-headingcontent h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    color:  #30303C;
+}
+
+section.careerbenifits .benefits-headingcontent .form-check-input{margin-top: .10em;}
+section.careerbenifits .benefits-headingcontent .form-check-inline{ margin-right: 6rem;}
+
+section.careerbenifits .benefits-headingcontent .form-check .form-check-input {
+    margin-left: -1em;
+}
+
+
+
+/* //////////////////////////////// career page by company end //////////////////// */
+
+.group1 {
+    width: 100%;
+   height: inherit;
+   padding: 90px 0px;
+    background-color:  #ECFBF9;
+    margin: auto;
+}
+.heading h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 57px;
+    text-align: center;
+    color: #30303C;
+}
+
+
+
+
+.career-benefits{
+    width: auto;
+    background-color: #F5F5FA;
+    padding-bottom: 70px;
+}
+
+.benefits-heading h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    color:  #30303C;
+    text-align: center;
+}
+
+
+.benefits-heading p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color:  #30303C;
+    text-align: center;
+}
+
+.card1{
+    min-height: 200px;
+}
+
+.benefits-img{
+    margin-left: -18px;
+}
+
+
+
+
+.it-careers-banner{
+    margin-top: 70px;
+    margin-bottom: 70px;
+    
+}
+
+
+.career-banner-heading h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 45px;
+    color:  #30303C;
+}
+
+.career-banner-description p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color:  #52525D;
+    align-items: center;
+}
+
+.career-banner-text{
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color:  #52525D;
+}
+
+@media screen and (max-width: 767px) {
+    .it-careers-banner{
+        margin-left: 10px;
+        margin-left: 10px;
+    }
+}
+
+
+.join-us{
+    margin-top: 57px;
+    margin-bottom: 80px;
+}
+
+.join-text h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+    color: #30303C;
+}
+
+.join-text p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 24px;
+    color: #52525D;
+    text-align: center;
+}
+
+section.careerbenifits .form-check-input{
+    background-color: aqua !important;
+    font-size: 22px;
+}
+
+.apply-button{
+    text-align: right;
+}
+
+.skill h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 24px;
+    color:#30303C;
+}
+
+.skill-text{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #52525D;
+}
+
+.Responsibilities h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 24px;
+    color:#30303C;
+}
+
+.Responsibilities-text{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #52525D;
+}
+
+.less-text h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #222F9C;
+}
+
+
+.border-line{
+    border-bottom: 1px solid #52525D;
+   
+}
+
+.quality-analyst h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color:#30303C;
+}
+
+
+  button:hover {
+   opacity: 0.7;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  section.join-us .benefits-headingcontent h1.js-text1:hover, section.reacjsques h1:hover, section.whywork h1.mainhead:hover, section.development h1.main_head:hover, section .Technologies h1.t-text1:hover, section.ourworkservice h1.g3-text1:hover, section.approachservice .Group4 h1:hover, section.wedo h1.wedo_head:hover, section.ourwork h1.wedo_head:hover, section.servicesec h5.service-heading:hover, .ui-ux-form h6:hover {
+        color: #3EDCC2;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -ms-transition: all 0.3s linear;
+        transition: all 0.3s linear;
+    }
+
+/* //////////////////////////////// career page by company end //////////////////// */
+/* career page sec end */
+
+@media screen and (max-width:1350px) {
+section.ourwork  .carousel-caption{
+   
+    padding-top: 10.25rem;
+  
+}
+}
+
+@media screen and (max-width:1300px) {
+    section.processsec #myGroup .midddlebox ul{font-size: 120%;}
+    /* section.socialiconssec .mainwidth{width: 550px;} */
+
+    section.rorbanner .heading h1{font-size: 30px;}
+    section.rorbanner .paragraph p{font-size: 25px;}
+    .service-heading {
+      
+        font-size: 24px;}
+}
+
+@media screen and (max-width:1280px) {
+    section.ourwork  .carousel-caption{
+       
+        padding-top: 131px;
+        
+     }
+     .career-img img{width: 100%;flex-shrink: 0;}
+}
+
+@media screen and (max-width:1024px) {
+   
+
+    section.wedo .paddbothside{
+        padding: 0px 0px;;
+    }
+    section.processsec #myGroup .midddlebox ul{font-size: 116%;}
+   section .pixoaticsolution p.solution-text{
+    font-size: 20px;
+   }
+
+   section.processsec #myGroup h5.procesrighthead{font-size: 14px; margin-bottom: 0px;}
+
+   section .pixoaticsolution form a.btn{width: 100% !important;}
+   section.ourror .agile h1 {
+   
+    font-size: 20px;}
+    section.pixoatictouch  .box{margin-top: 25px;}
+
+    section.careerbenifits .btnmarginresp{ margin-top: 15px;}
+
+    section.ourwork  .carousel-caption{
+       
+        padding-top: 125px;
+        
+     }
+    
+     
+     section.approachservice .agile h1{font-size: 20px; padding-bottom: 9px; line-height: 22px;}
+     section.reacjsques h1{   margin-bottom: 40px;}
+
+     section.socialiconssec .donsmall{display: block !important;}
+     section.socialiconssec .donfull{display: none !important;}
+
+     
+}
+
+
+
+@media screen and (max-width:990px)
+{
+   section.whywework .padatsmallsize{padding: 0px 30px;}
+   /* header.header .navbar-light .navbar-nav .nav-link{ text-align: center;} */
+  header.header .navbar-collapse{background: aliceblue;
+    padding: 10px;margin-top: 10px;}
+
+    header.header .navbar-light .navbar-nav .nav-link:hover{color: #3EDCC2; border-bottom: none; }
+
+   div.hiresofware hr{margin-top: 0px;}
+
+   section .pixoaticsolution img{margin: auto; display: block;}
+   section .career-img img{
+       
+    width: 100% !important;}
+    section.processsec .midddlebox ul {
+        font-size: 79%;
+    }
+    section.processsec #myGroup p.processpara{font-size: 14px;
+        line-height: 27px;}
+    
+        section.processsec #myGroup{display: none;}
+
+    section.processsec #myvales{display: block;}
+    section.processsec  .proceimg img {width: 100%; margin: auto;}
+}
+
+@media screen and (max-width:920px)
+{
+   
+    section.ourwork  .carousel-item img{
+       
+       display: none !important;
+        
+     }
+        section.ourwork  .carousel-item .caroseldiv {
+        display:contents!important;
+        text-align: center;
+    }
+  
+}
+
+@media screen and (max-width:768px){
+    section.ourwork  .carousel-caption{
+       position: inherit;
+      
+        text-align: center !important;
+        left: 0%;
+    }
+    section.approachservice .mainagile{margin-top: 10px;}
+    section.ourwork  .carousel-item .caroseldiv {
+        display:contents!important;
+    }
+    section.ourworkservice .mrgnbtm{
+        margin-bottom: 12% !important;
+       }
+    
+       section.whywework .points{
+        min-height: 0px;
+    }
+
+      section.processsec .midddlebox ul{font-size: 75%;}
+      section.processsec #myGroup h5.procesrighthead {
+        font-size: 17px;}
+
+      section.rorbanner .Group4 .description  p {font-size: 13px;}
+      section.development .mainpara{text-align: center;}
+
+      section.gettouch  .card{text-align: center; }
+
+      section.pixoatictouch  .box{margin-top: 25px;}
+
+      section.mapsec .mrgnbtm{margin-top: 25px;}
+
+      section.whywework .marbtmsm{margin-bottom: 20px;} 
+      section .hideonmain{display: block;}
+      section  .hideonsmall{display: none;}
+     
+}
+
+/* @media screen and (min-width:768px) {
+   
+} */
+
+@media screen and (max-width:550px) {
+    .workingEmployeeimg{
+        height: 200px;
+    }
+
+    .whywework .numberCircle{
+        margin: auto;
+    }
+    section.whywework .padatsmallsize{text-align: center;}
+
+    section.pixoatictouch .logos img{margin: auto;}
+
+    .bannerbg img.imgbnner{
+       margin: 15px 0;
+    }
+ 
+   .wedo .mainbox{
+       margin-bottom: 10px;
+        
+   }
+
+   header .expertbtn{
+    margin-top: -12px;
+   }
+
+ 
+
+  section.questionsec .accordion-button{
+    font-size: 16px;
+    padding: 0;
+  }
+
+   /* section.careerbenifits .benefits-headingcontent .form-check-inline{margin-right: 0rem;} */
+
+   .main{margin-left: 0em !important ;
+    margin-right: 0em !important;}
+
+    div.hiresofware hr{margin-top: 50px;}
+    section.topsec .main_head {
+     
+        font-size: 25px;
+        line-height: 39px;}
+    
+        section.questionsec .accordion-button::after {
+            background-image: url(images/plus2.png);
+            transform: scale(1);
+}
+}
+
+@media screen and (max-width:280px) {
+    section.questionsec .accordion-button{font-size: 11px;}
+    section.reacjsques h1{font-size: 25px;
+        line-height: 34px;    margin-bottom: 40px;}
+        section.questionsec .accordion-button::after {
+            background-image: url(images/plus2.png);
+            transform: scale(1);
+        }
+    
+        section .border-secondary .main_head {
+       
+        font-size: 21px;
+        line-height: 33px;
+        }
+
+        section.processsec .midddlebox ul {
+            font-size: 76%;
+        }
+    
+}

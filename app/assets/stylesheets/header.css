@@ -1,0 +1,57 @@
+/* header start css */
+header.header .navbar-light .navbar-nav .nav-link {
+   color: #000;
+ }
+ 
+ header.header .navbar-light .navbar-nav .nav-link.active,
+ header.header .navbar-light .navbar-nav .show > .nav-link,
+ header.header .navbar-light .navbar-nav .nav-link:hover {
+   color: #3edcc2;
+ }
+ 
+ header.header .navbar-light .navbar-nav .nav-link {
+   display: inline-block;
+ }
+ 
+ header.header .navbar-light .navbar-nav .nav-link:after {
+   display: block;
+   content: '';
+   border-bottom: solid 3px #019fb6;
+   width: 0;
+   transform: scaleX(0);
+   transition: transform 250ms ease-in-out;
+ }
+ 
+ header.header .navbar-light .navbar-nav .nav-link:hover:after {
+   transform: scaleX(1);
+   width: 100%;
+ }
+ 
+ header.header .expertbtn {
+   background: transparent;
+   color: #222f9c;
+   border: 2px solid #222f9c;
+ }
+ 
+ header.header .expertbtn:hover {
+   background: #222f9c;
+   color: #fff;
+   border: 2px solid #fff;
+   opacity: 1;
+   transition: linear 1s;
+ }
+ 
+ @media screen and (max-width: 990px) {
+   header.header .navbar-collapse {
+     background: aliceblue;
+     padding: 10px;
+     margin-top: 10px;
+   }
+ 
+   header.header .navbar-light .navbar-nav .nav-link:hover {
+     color: #3edcc2;
+     border-bottom: none;
+   }
+ }
+ /* header end css */
+ 

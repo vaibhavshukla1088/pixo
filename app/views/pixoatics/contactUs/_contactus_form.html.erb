@@ -1,0 +1,92 @@
+<div class="main pb-5 mt-1 model">    
+    <div class = " col-12 ">
+        <div class="box" id="contact_redirect">
+            <div class ="" id="contact-us-errors">
+                <%= render "layouts/share/errors" %>
+            </div>
+            <h1 class = "mainhead text-center pb-3">Talk To Our Expert</h1>
+            <%= form_tag(on_contact_us_form_path, method: :post, remote: true, id: "myContactForm", class: "row g-3") do %>
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-sm-1 mt-md-4">
+                    <%= text_field_tag 'name', nil, class: 'form-control', placeholder: 'Full Name*', required: true %>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-sm-1 mt-md-4">
+                    <%= text_field_tag 'email', nil, class: 'form-control', placeholder: 'Email*' %>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-sm-1 mt-md-4">
+                    <%= text_field_tag 'country', nil, class: 'form-control', placeholder: 'Country*' %>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-sm-1 mt-md-4">
+                    <%= text_field_tag 'skype', nil, class: 'form-control', placeholder: 'Skype' %>
+                </div>
+                <div class="col-sm-offset-2 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-sm-1 mt-md-4">
+                    <%= text_area_tag 'message', nil, class: 'form-control', rows: 3, placeholder: 'Message*' %>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-sm-1 mt-md-3">
+                    <button type="button" class="btn btn-primary rounded-pill mt-3 w-100 btnhover" id="myContactSubmit">Submit <i class="fa fa-arrow-right-long"></i></button>
+                </div>
+            <% end %>
+        </div> 
+    </div>
+</div>  
+
+<style>
+.form-control {
+    padding: 15px;
+    background-color: #e0e0e09c;
+}  
+.form-check-input{    font-family: 'Poppins';}
+.model .btn-primary{font-weight:600px; font-size:1.3rem;}
+.model h1{font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+    color: #30303C;}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var resetContactusModalErrors = document.querySelectorAll("#reset-contactus-modal-errors");
+    resetContactusModalErrors.forEach(element => {
+        element.addEventListener("click", function (event) {
+            var requestQuoteDiv = document.querySelector('#contact-us-errors');
+            var errorContainer = requestQuoteDiv.querySelector('#error-container');
+            errorContainer.classList.add('d-none');
+        })
+    });   
+    const submitButton = document.getElementById("myContactSubmit");
+    const form = document.getElementById("myContactForm");
+
+    submitButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    const formData = new FormData(form);
+    fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+        "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').content,
+        },
+        })
+        .then((response) => response.json())
+        .then((data) => {
+        if (data.success) {
+            var requestQuoteDiv = document.querySelector('#contact-us-errors');
+            var errorContainer = requestQuoteDiv.querySelector('#error-container');
+            errorContainer.classList.add('d-none');
+            alert("Thank you for reaching out to us! Our team will get in touch with you soon.");
+            form.reset();
+        } 
+        else {
+            var requestQuoteDiv = document.querySelector('#contact-us-errors');
+            var errorContainer = requestQuoteDiv.querySelector('#error-container');
+            errorContainer.classList.remove('d-none');
+            var errors = data.errors.join("\n");
+            requestQuoteDiv.querySelector('#error-list').innerText = errors;
+        }
+        })
+        .catch((error) => {
+        alert("An error occurred: " + error.message);
+        });
+    });
+});  
+</script>
