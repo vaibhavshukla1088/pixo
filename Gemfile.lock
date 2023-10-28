@@ -346,6 +346,7 @@ DEPENDENCIES
   jbuilder
   jsbundling-rails
   mini_magick (>= 4.9.5)
+  nokogiri
   pg
   pry (~> 0.14.2)
   pry-doc

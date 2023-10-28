@@ -93,3 +93,4 @@ gem "pry", "~> 0.14.2"
 gem 'active_storage_validations'
 gem 'mini_magick', '>= 4.9.5'
 gem 'country_select'
+gem 'nokogiri'
